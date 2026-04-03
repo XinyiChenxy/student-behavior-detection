@@ -10,11 +10,12 @@ python train.py \
   --img 640 \
   --batch 2 \
   --epochs 1000 \
-  --data data/StudentWatch.yaml \
+  --data data/StudentWatch_no_hr.yaml \
   --cfg models/yolov5s.yaml \
   --weights yolov5s.pt \
+  --hyp data/hyps/hyp.sb_aug.yaml \
   --workers 2 \
   --cache \
   --project runs/train \
-  --name sb_baseline \
+  --name sb_no_hr_aug \
   --patience 0
