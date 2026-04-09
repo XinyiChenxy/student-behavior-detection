@@ -1,4 +1,5 @@
 #!/bin/bash
+# Run SE ablation with SE inserted after the head P4 and P5 fusion blocks.
 set -e
 
 export YOLOv5_AUTOINSTALL=False
@@ -9,11 +10,12 @@ cd /workspace/dl_project/project_yolov5/yolov5
 python train.py \
   --img 640 \
   --batch 2 \
-  --epochs 100 \
-  --data data/StudentWatch.yaml \
-  --cfg models/yolov5s_se.yaml \
+  --epochs 1000 \
+  --data data/StudentWatch_no_hr.yaml \
+  --cfg models/yolov5s_se_head_p4_p5.yaml \
   --weights yolov5s.pt \
   --workers 2 \
   --cache \
   --project runs/train \
-  --name sb_se
+  --name sb_se_head_p4_p5_no_hr \
+  --patience 0
