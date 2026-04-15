@@ -108,9 +108,8 @@ To set up a local development environment:
 
 1. Create a virtual environment:
    ```bash
-   python -m venv .venv
-   .venv\Scripts\activate  # On Windows
-   source .venv/bin/activate  # On macOS/Linux
+   conda create -n student-behavior-detector python=3.10
+   conda activate student-behavior-detector
    ```
 
 2. Install dependencies:
