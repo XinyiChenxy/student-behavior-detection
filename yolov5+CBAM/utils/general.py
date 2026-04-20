@@ -1012,7 +1012,7 @@ def non_max_suppression(
     conf_thres=0.25,
     iou_thres=0.45,
     classes=None,
-    agnostic=False,
+    agnostic=True,
     multi_label=False,
     labels=(),
     max_det=300,
